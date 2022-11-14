@@ -58,7 +58,7 @@ The largest rectangle is shown in the red area, which has an area = 10 units.
 <li>Initialize array of same size as heights, let's name it result<li>
 <li>Initialize stack st</li>
 <li>Traverse the array heights using for loop, from <code>i=N-1</code> to <code>i=0</code></li>
-<li>if stack is not empty and for each ith iteration <code>heights[i]</code> is smaller than or equal to the <code>heights[st.top()]<code> then pop the element from stack</li>
+<li>if stack is not empty and for each ith iteration <code>heights[i]</code> is smaller than or equal to the <code>heights[st.top()]</code> then pop the element from stack</li>
 <li>if the stack is empty than set <code>result[i]=N</code> where <code>N</code> is the size of heights array</li>
 <li>else set <code>result[i]=st.top()</code></li>
 <li> for each ith iteration push the value <code>i</code> into stack</li>
@@ -78,3 +78,6 @@ The largest rectangle is shown in the red area, which has an area = 10 units.
 <p><strong>Space Complexity:</strong>O(n)</p>
 
 </div>
+
+## Screenshot
+![ss](./ss.png)
