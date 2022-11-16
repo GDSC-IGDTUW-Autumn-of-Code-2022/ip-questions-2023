@@ -1,4 +1,14 @@
-<h2><a href="https://leetcode.com/problems/largest-rectangle-in-histogram/">Largest Rectangle in Histogram</a></h2><h3>Hard</h3><hr><div><p>Given an array of integers <code>heights</code>representing the histogram's bar height where the width of each bar is <code>1</code>, return the area of the largest rectangle in the histogram.</p>
+<h2><a href="https://leetcode.com/problems/largest-rectangle-in-histogram/">Largest Rectangle in Histogram</a></h2><h3>Hard</h3><hr>
+
+## Table of contents
+
+- [Overview](#overview)
+- [Approach](#approach)
+- [Screenshot](#screenshot)
+- [References](#references)
+
+## Overview 
+<div><p>Given an array of integers <code>heights</code>representing the histogram's bar height where the width of each bar is <code>1</code>, return the area of the largest rectangle in the histogram.</p>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
@@ -24,8 +34,8 @@ The largest rectangle is shown in the red area, which has an area = 10 units.
 </ul>
 </div>
 
+## Approach
 <div>
-<h2>Approach</h2>
 <p>&nbsp;</p>
 <h3>Brute Force</h3>
 <ul>
@@ -81,3 +91,8 @@ The largest rectangle is shown in the red area, which has an area = 10 units.
 
 ## Screenshot
 ![ss](./ss.png)
+
+## References
+- [Leetcode Discussion](https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/?currentPage=1&orderBy=hot&query=)
+- [GeeksForGeeks](https://www.geeksforgeeks.org/largest-rectangular-area-in-a-histogram-using-stack/)
+- [InterviewBit](https://www.interviewbit.com/blog/largest-rectangle-in-histogram/)
