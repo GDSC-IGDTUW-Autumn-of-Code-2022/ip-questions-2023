@@ -1,9 +1,9 @@
-# Problem Statement: 
+## Problem Statement: 
 Given an array Arr[] of integers, rearrange the numbers of the given array into the lexicographically next greater permutation of numbers.
 
 If such an arrangement is not possible, it must rearrange it as the lowest possible order (i.e., sorted in ascending order).
 
-# Example:-
+## Example:-
 
 Input format: Arr[] = {1,3,2}
 
@@ -12,7 +12,7 @@ Output: Arr[] = {2,1,3}
 Explanation: All permutations of {1,2,3} are {{1,2,3} , {1,3,2}, {2,13} , {2,3,1} , {3,1,2} , {3,2,1}}. 
 So, the next permutation just after {1,3,2} is {2,1,3}.
 
-# Approach:-
+## Approach:-
 Step 1: Traverse in an array from backward such that ith index element of the array is less than (i+1)th index element.
 Store that index in some variable.
 
@@ -28,4 +28,4 @@ Step 5: Reverse array from index+1 where the index is found at step 1 till the e
 we will get desired array .
 
 
-# Time complexity=O(N)
+## Time complexity=O(N)
