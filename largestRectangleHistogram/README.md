@@ -84,6 +84,19 @@ The largest rectangle is shown in the red area, which has an area = 10 units.
    <li>Maximize the <code>largestArea</code></li>
 </ul>
 
+<p><strong>Time Complexity:</strong>O(3n) that can be considered as O(n)</p>
+<p><strong>Space Complexity:</strong>O(n)</p>
+
+<h3> Using Stack in single pass </h3>
+<ul>
+	<li>Intialize an empty stack</li>
+	<li>Iterarte the heights of bar for the given steps</li>
+	(i) If the stack is empty or heights[i] is higher than the bar at top of stack, then push 'i' to stack. </br>
+	(ii) If the bar is smaller than the top of the stack, then keep removing the top of the stack while the top of the stack is greater. </br>
+	(iii) Then calculate the area of the rectangle and update the maxArea. </br>
+	<li> if the stack is not empty, then one by one remove all bars from the stack and repeat the above steps for every removed bar </li>
+</ul>
+
 <p><strong>Time Complexity:</strong>O(n)</p>
 <p><strong>Space Complexity:</strong>O(n)</p>
 
