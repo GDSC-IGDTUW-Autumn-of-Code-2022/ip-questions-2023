@@ -1,58 +1,53 @@
-# Decoding IP
-INTERVIEW PRACTICE QUESTIONS 
+# TRAPPING RAIN WATER
 
-<p align="center">
-  <img src= "https://user-images.githubusercontent.com/79600026/200432844-2b35b466-e304-4145-a086-1dfeb4a4aa58.jpg" alt="7" width="350"/>
-</p>
+## Problem Statement:
+Given an array of N non-negative integers arr[] representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
 
+## Approach:
+* To find water stored, we iterate over the given array.
+* Water can be stored if there are higher bars on the left and right of the given index.
+* The amount of water stored can be calculated by finding the maximum height of bar on the left and right of the given position.
+* Total amount of water stored is the sum of water at each position.
 
-## CONTRIBUTING TO THIS PROJECT
+## Step 1: Enter the size of array and input the array.
 
-- Take a look at the Existing Issues of your project and find one that interests you or create your own Issues!
-- Tag the repository maintainers or issue creators to assign that issue to you.
-- Wait for the Issue to be assigned to you after which you can start working on it.
-- Fork the Repo and create a Branch for any Issue that you are working upon.
-- Create a Pull Request which will be promptly reviewed and suggestions would be added to improve it.
-- Once your PR is approved, you changes will be merged into the project. 
-- Add Screenshots to help us know what this Script is all about.
-- Repository specific contribution information is in the respective READMEs of each repo.
-- Do not abuse and/or use bad language. Ensure you don't insult anyone. Be respectful and inclusive.
-- Please mention your full name on your GitHub handle to be eligible for prizes.
+    int n;
+    cin >> n;
 
+    int height[n];
 
-You can take up any of the existing issues and solve them or create a new issues to to contribute your problems and solutions!<br/> 
-Contribution period ends: 22 December 2022
+    for (int j=0; j<n; j++){
+        cin >> height[j];
+    }
+    
+## Step 2: Find stored water for each index.
+    
+    int stored_water = 0;
+    for (int j=1; j<n-1; j++){
+        int left_max = height[j];
+        int right_max = height[j];
 
+### Finding maximum bar height at the left of the index i. 
+        
+        for (int k=0; k<j; k++){
+            left_max = max(left_max,height[k]);
+        }
+        
+### Finding maximum bar height at the right of the index i.
+        
+        for (int k=j+1; k<=n-1; k++){
+            right_max = max(right_max,height[k]);
+        }
+        
+### Adding stored water of the index i to the total stored water.
+        
+        stored_water += min(left_max,right_max) - height[j];
+    }
+    
+## Step 3: Printing the total stored water.
 
-## How to get started?
-
-You can refer to the following resources on Git and Github to get started and contact our Project Mentors via [Discord](https://discord.gg/xTNC4MGB) if you have any doubts.
-
-- [Learn how to contribute to GDSC IGDTUW Autumn of Code Projects](https://www.youtube.com/watch?v=Hcc1LXldeJk)
-- [Go through this repository to how to contribute learn step-by-step](https://github.com/firstcontributions/first-contributions)
-- [Watch this video to get started](https://youtu.be/SL5KKdmvJ1U)
-- [Forking a Repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
-- [Cloning a Repo](https://help.github.com/en/desktop/contributing-to-projects/creating-a-pull-request)
-- [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)
-- [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)
-
-
-
-## Prizes 
-- Top 3 contributors 🍁<br/> 
-Special prize | Swag Kits | Shoutouts on Social Media handles | Certificate of appreciation
-
-- Top 5 female contributors 🍁 <br/>
-Special prize | Swag Kits | Shoutouts on Social Media handles | Certificate of appreciation
-
-- Top 10 contributors 🍁 <br/>
-Shoutouts on Social Media handles | Swag kits and lots of exciting goodies | Certificate of appreciation
-
-- Top 25 contributors 🍁 <br/>
-Swag kits and lots of exciting goodies | Certificate of appreciation
-
-- All the contributors will get a certificate of appreciation for their first successful pull request
-
-
-Join our [Discord](https://discord.gg/KKFUVma6) to stay in touch with project mentors and for any furthur questions. 
-
+    cout << "Stored water = " << stored_water << endl;
+    
+## Complexity:
+* Time complexity : Since there ate two nested loops, TC = O(N) 
+* Space complexity : Since no extra space is required, SC = O(1)
